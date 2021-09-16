@@ -24,7 +24,6 @@ app.post("/",(req,res,next)=>{
     // you can also send your own refreash token from the body parser;
     const {noOfResults,minTime,maxTime,email}=req.body
     oAuth2Client.setCredentials({
-        // refresh_token:refreashToken
         refresh_token: process.env.refreashToken
     })
     let dataArray=[];
@@ -33,8 +32,8 @@ app.post("/",(req,res,next)=>{
     
     calender.events.list({
         calendarId: 'primary',
-        timeMin: (new Date(minTime)).toISOString(),
-        timeMax:(new Date(maxTime)).toISOString(),
+        // timeMin: (new Date(minTime)).toISOString(),
+        // timeMax:(new Date(maxTime)).toISOString(),
         maxResults:noOfResults,
         singleEvents: true,
         orderBy: 'startTime',
