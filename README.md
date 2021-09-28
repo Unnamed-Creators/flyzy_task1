@@ -20,6 +20,14 @@ API for extracting flight data from google calendr
 - Nodemon
 - googleapis
 
+## Environment variable
+
+```sh
+clientId=google clientId
+clientSecret= google clientSecret
+refreashToken= refreashToken from google oauth 2.0 playground (check google calendar apis calendar and calendar events)
+
+```
 
 ## Installation
 
